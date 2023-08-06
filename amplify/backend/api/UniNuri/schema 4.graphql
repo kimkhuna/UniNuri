@@ -1,0 +1,38 @@
+type Infocomment @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  com_writer: String!
+  com_content: String!
+  registerdate: AWSDateTime
+  infoboardID: ID! @index(name: "byInfoboard")
+}
+
+type Infoboard @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  content: String!
+  writer: String!
+  registerdate: AWSDateTime
+  updatedate: AWSDateTime
+  deletedate: AWSDateTime
+  Infocomments: [Infocomment] @hasMany(indexName: "byInfoboard", fields: ["id"])
+}
+
+type Freecomment @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  com_writer: String!
+  com_content: String!
+  registerdate: AWSDateTime
+  freeboardID: ID! @index(name: "byFreeboard")
+}
+
+type Freeboard @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  content: String!
+  writer: String!
+  registerdate: AWSDateTime
+  updatedate: AWSDateTime
+  deletedate: AWSDateTime
+  Freecomments: [Freecomment] @hasMany(indexName: "byFreeboard", fields: ["id"])
+}
+ 
