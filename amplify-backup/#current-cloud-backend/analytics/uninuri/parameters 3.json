@@ -1,0 +1,21 @@
+{
+    "appName": "uninuri",
+    "roleName": "pinpointLambdaRoleda685c9c",
+    "cloudformationPolicyName": "cloudformationPolicyda685c9c",
+    "cloudWatchPolicyName": "cloudWatchPolicyda685c9c",
+    "pinpointPolicyName": "pinpointPolicyda685c9c",
+    "authPolicyName": "pinpoint_amplify_da685c9c",
+    "unauthPolicyName": "pinpoint_amplify_da685c9c",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

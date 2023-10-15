@@ -1,0 +1,134 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-uninuri-staging-82546-authRole",
+      "UnauthRoleArn": "arn:aws:iam::825562211124:role/amplify-uninuri-staging-82546-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::825562211124:role/amplify-uninuri-staging-82546-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-uninuri-staging-82546-deployment",
+      "UnauthRoleName": "amplify-uninuri-staging-82546-unauthRole",
+      "StackName": "amplify-uninuri-staging-82546",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:825562211124:stack/amplify-uninuri-staging-82546/679fb1d0-02b1-11ee-954b-020fc26d1194",
+      "AmplifyAppId": "d2ar022yf2jpya"
+    }
+  },
+  "analytics": {
+    "uninuri": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint",
+      "output": {
+        "appName": "uninuri-staging",
+        "Region": "ap-northeast-2",
+        "Id": "def74d8816374a039d6dfb6705e97b53"
+      },
+      "lastPushTimeStamp": "2023-06-29T11:32:20.766Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uninuri-staging-82546-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "logicalId": "analyticsuninuri"
+      },
+      "lastPushDirHash": "K2uNcD6beycipCZupaCjQs7gYOQ="
+    }
+  },
+  "api": {
+    "UniNuri": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        },
+        "GraphQLAPIIdOutput": "urlcjwondvgf5mvyzlfzymubp4",
+        "GraphQLAPIEndpointOutput": "https://uqbrjjzfffdhbjmljm3k5yzyou.appsync-api.ap-northeast-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-wyj4lhzbsvdgze6ia3c3pnbxru"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-06-29T11:32:20.770Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uninuri-staging-82546-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiUniNuri"
+      },
+      "lastPushDirHash": "4z5rSeKt1vfzIfECVpEFfdpi+dU="
+    }
+  },
+  "auth": {
+    "uninuri": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed",
+      "output": {
+        "UserPoolId": "ap-northeast-2_YXZQDj4cu",
+        "AppClientIDWeb": "7b78r4g3qk6hjlkb20enhnve6e",
+        "AppClientID": "332l20jau1aqorkoudrpceivv0",
+        "IdentityPoolId": "ap-northeast-2:372f238c-358a-4a63-a49d-160e83944aeb",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-2:825562211124:userpool/ap-northeast-2_YXZQDj4cu",
+        "IdentityPoolName": "uninuri_identitypool_2fdff23e__staging",
+        "UserPoolName": "uninuri_userpool_38a8fda5"
+      },
+      "lastPushTimeStamp": "2023-06-29T11:32:20.771Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uninuri-staging-82546-deployment/amplify-cfn-templates/auth/uninuri-cloudformation-template.json",
+        "logicalId": "authuninuri"
+      },
+      "customAuth": false,
+      "lastPushDirHash": "X8a+WIwByvIhiTw4DDCNVjDh1Yw="
+    }
+  },
+  "notifications": {
+    "uninuri": {
+      "Id": "def74d8816374a039d6dfb6705e97b53",
+      "ResourceName": "uninuri",
+      "Name": "uninuri-staging",
+      "service": "Pinpoint",
+      "output": {
+        "Id": "def74d8816374a039d6dfb6705e97b53",
+        "Name": "uninuri-staging",
+        "Region": "ap-northeast-2",
+        "APNS": {
+          "ApplicationId": "def74d8816374a039d6dfb6705e97b53",
+          "CreationDate": "2023-06-25T04:16:58.047Z",
+          "DefaultAuthenticationMethod": "Key",
+          "Enabled": true,
+          "HasCredential": false,
+          "HasTokenKey": true,
+          "Id": "apns",
+          "IsArchived": false,
+          "LastModifiedDate": "2023-06-25T04:16:58.047Z",
+          "Platform": "APNS",
+          "Version": 1
+        },
+        "regulatedResourceName": "uninuri"
+      },
+      "lastPushTimeStamp": "2023-06-25T04:15:37.223Z"
+    }
+  }
+}

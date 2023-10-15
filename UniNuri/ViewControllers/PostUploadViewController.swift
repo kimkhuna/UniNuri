@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import DropDown
+import DropDown
 import Amplify
 import AWSDataStorePlugin
 
@@ -24,25 +24,27 @@ class PostUploadViewController: UIViewController {
     
     var category: String?
     
-//    let dropDown = DropDown()
+    let dropDown = DropDown()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.categoryTextField.text = category ?? ""
-//        dropDown.anchorView = categoryView
-//
-//        dropDown.dataSource = ["FreeBoard", "InfoBoard"]
+        
+        
+        dropDown.anchorView = categoryView
+
+        dropDown.dataSource = ["FreeBoard", "InfoBoard"]
         
     }
     @IBAction func btncategoryClicked(_ sender: UIButton) {
         
-//        dropDown.show()
-//
-//        dropDown.selectionAction = {
-//            [unowned self] (index: Int, item: String) in
-//            self.categoryTextField.text! = item
-//        }
+        dropDown.show()
+
+        dropDown.selectionAction = {
+            [unowned self] (index: Int, item: String) in
+            self.categoryTextField.text! = item
+        }
     }
     
     @IBAction func btnUploadClicked(_ sender: UIButton) {

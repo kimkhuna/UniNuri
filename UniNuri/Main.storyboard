@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,7 +86,7 @@
         <!--Apple Register View Controller-->
         <scene sceneID="xPc-7N-Xl6">
             <objects>
-                <viewController id="Eoq-oc-oxi" customClass="AppleRegisterViewController" customModule="UniNuri" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppleRegisterVC" id="Eoq-oc-oxi" customClass="AppleRegisterViewController" customModule="UniNuri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xVg-Pr-4vd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +156,9 @@
                             <constraint firstItem="ano-u3-IWI" firstAttribute="centerX" secondItem="xVg-Pr-4vd" secondAttribute="centerX" id="p9W-YK-3j3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nickNameTextField" destination="L9i-CU-4z8" id="NRf-55-8hj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gca-rS-0kx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -772,7 +775,7 @@ Our Email : no-reply@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jFd-VM-jHc">
-                                <rect key="frame" x="10" y="152" width="394" height="192"/>
+                                <rect key="frame" x="10" y="232" width="394" height="192"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="246" translatesAutoresizingMaskIntoConstraints="NO" id="37r-Q2-Z0E">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
@@ -859,7 +862,7 @@ Our Email : no-reply@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sci-hg-mVs">
-                                <rect key="frame" x="10" y="394" width="394" height="192"/>
+                                <rect key="frame" x="10" y="474" width="394" height="192"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="249" translatesAutoresizingMaskIntoConstraints="NO" id="Ptl-B2-XZD">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
@@ -939,7 +942,7 @@ Our Email : no-reply@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UniNuri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYG-Dl-xjv">
-                                <rect key="frame" x="10" y="92" width="116" height="40"/>
+                                <rect key="frame" x="20" y="112" width="116" height="40"/>
                                 <fontDescription key="fontDescription" name="omyu_pretty" family="omyu pretty" pointSize="40"/>
                                 <color key="textColor" red="0.85098039215686272" green="0.31764705882352939" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -948,13 +951,13 @@ Our Email : no-reply@
                         <viewLayoutGuide key="safeArea" id="M0k-pV-Kwn"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.94509803921568625" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="cYG-Dl-xjv" firstAttribute="top" secondItem="M0k-pV-Kwn" secondAttribute="top" id="1YD-uT-XFD"/>
+                            <constraint firstItem="cYG-Dl-xjv" firstAttribute="top" secondItem="M0k-pV-Kwn" secondAttribute="top" constant="20" id="1YD-uT-XFD"/>
                             <constraint firstItem="M0k-pV-Kwn" firstAttribute="trailing" secondItem="sci-hg-mVs" secondAttribute="trailing" constant="10" id="Cah-es-H9O"/>
                             <constraint firstItem="sci-hg-mVs" firstAttribute="leading" secondItem="M0k-pV-Kwn" secondAttribute="leading" constant="10" id="FtG-tD-Hps"/>
                             <constraint firstItem="sci-hg-mVs" firstAttribute="top" secondItem="jFd-VM-jHc" secondAttribute="bottom" constant="50" id="N3n-WN-BIv"/>
                             <constraint firstAttribute="trailing" secondItem="jFd-VM-jHc" secondAttribute="trailing" constant="10" id="XAo-jd-eYB"/>
-                            <constraint firstItem="cYG-Dl-xjv" firstAttribute="leading" secondItem="M0k-pV-Kwn" secondAttribute="leading" constant="10" id="YbN-e4-kpY"/>
-                            <constraint firstItem="jFd-VM-jHc" firstAttribute="top" secondItem="cYG-Dl-xjv" secondAttribute="bottom" constant="20" id="e1Z-Ln-Iwh"/>
+                            <constraint firstItem="cYG-Dl-xjv" firstAttribute="leading" secondItem="M0k-pV-Kwn" secondAttribute="leading" constant="20" id="YbN-e4-kpY"/>
+                            <constraint firstItem="jFd-VM-jHc" firstAttribute="top" secondItem="cYG-Dl-xjv" secondAttribute="bottom" constant="80" id="e1Z-Ln-Iwh"/>
                             <constraint firstItem="jFd-VM-jHc" firstAttribute="leading" secondItem="M0k-pV-Kwn" secondAttribute="leading" constant="10" id="gdn-Oq-C7D"/>
                         </constraints>
                     </view>
@@ -1106,7 +1109,7 @@ Our Email : no-reply@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qzo-jB-cPY">
-                                <rect key="frame" x="20" y="208" width="374" height="644"/>
+                                <rect key="frame" x="20" y="208" width="374" height="624"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Im-PP-Ygq">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="2"/>
@@ -1116,17 +1119,17 @@ Our Email : no-reply@
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QOT-Yh-5Ej">
-                                        <rect key="frame" x="0.0" y="10" width="374" height="200"/>
+                                        <rect key="frame" x="0.0" y="10" width="374" height="180"/>
                                         <color key="backgroundColor" red="0.98039215686274506" green="0.94509803921568625" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="tqF-yL-MRT"/>
+                                            <constraint firstAttribute="height" constant="180" id="tqF-yL-MRT"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="omyu_pretty" family="omyu pretty" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0G-fa-Nph">
-                                        <rect key="frame" x="0.0" y="218" width="374" height="150"/>
+                                        <rect key="frame" x="0.0" y="198" width="374" height="150"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hw2-vx-iOX">
                                                 <rect key="frame" x="0.0" y="35" width="374" height="115"/>
@@ -1144,7 +1147,7 @@ Our Email : no-reply@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="paperplane" catalog="system"/>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="writer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh8-EM-MNW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글을 남겨보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh8-EM-MNW">
                                                 <rect key="frame" x="10" y="0.0" width="294" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="Amu-Mn-nxb"/>
@@ -1169,7 +1172,7 @@ Our Email : no-reply@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EQ6-jh-aDS">
-                                        <rect key="frame" x="0.0" y="376" width="374" height="268"/>
+                                        <rect key="frame" x="0.0" y="356" width="374" height="268"/>
                                         <color key="backgroundColor" red="0.98039215686274506" green="0.94509803921568625" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="7Qd-7s-iYX"/>
@@ -1230,17 +1233,17 @@ Our Email : no-reply@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Vladimir Kim Wins Cy Young Award." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="x3J-5f-gzx">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[속보] 내일 개강!!" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="x3J-5f-gzx">
                                         <rect key="frame" x="88" y="0.0" width="200" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="VwD-gn-nwD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="omyu_pretty" family="omyu pretty" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="He won the Cy Young Award for knuckleballer following Phil Nigro" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-tr-XOP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="하... 방학이 너무 짧아ㅜ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-tr-XOP">
                                 <rect key="frame" x="20" y="253" width="374" height="200"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1264,7 +1267,7 @@ Our Email : no-reply@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="na7-Lw-YuC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="omyu_pretty" family="omyu pretty" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt5-Xq-HGa">
@@ -1285,9 +1288,12 @@ Our Email : no-reply@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-wN-GKy">
-                                <rect key="frame" x="168" y="503" width="78.5" height="34.5"/>
+                                <rect key="frame" x="174" y="503" width="66" height="29"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Upload"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload">
+                                    <fontDescription key="titleFontDescription" name="omyu_pretty" family="omyu pretty" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="btnUploadClicked:" destination="Zev-Zu-LtB" eventType="touchUpInside" id="Sy4-ua-irZ"/>
                                 </connections>

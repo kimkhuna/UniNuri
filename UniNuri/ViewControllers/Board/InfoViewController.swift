@@ -79,11 +79,14 @@ extension InfoViewController: UITableViewDataSource, UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let temperalDateFormatter = TemporalFormat.short
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "InfoDetailCell", for: indexPath) as? InfoDetailTableViewCell else{return UITableViewCell()}
         cell.titleLabel.text = infoboard[indexPath.row].title
         cell.writerLabel.text = infoboard[indexPath.row].writer
         cell.contentLabel.text = infoboard[indexPath.row].content
-//        cell.dateLabel.text = infoboard[indexPath.row].registerdate
+        cell.dateLabel.text = infoboard[indexPath.row].registerdate?.iso8601FormattedString(format: temperalDateFormatter)
         
         return cell
     }
@@ -97,12 +100,14 @@ extension InfoViewController: UITableViewDataSource, UITableViewDelegate{
         
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "PostDetailVC") as? PostDetailViewController else{return}
         
+        let temperalDateFormatter = TemporalFormat.short
+        
         vc.category = "Infoboard"
         vc.boardID = infoboard[indexPath.row].id
         vc.postTitle = infoboard[indexPath.row].title
         vc.content = infoboard[indexPath.row].content
         vc.writer = infoboard[indexPath.row].writer
-        vc.date = infoboard[indexPath.row].registerdate?.iso8601String
+        vc.date = infoboard[indexPath.row].registerdate?.iso8601FormattedString(format: temperalDateFormatter)
         
         
         self.navigationController?.pushViewController(vc, animated: true)

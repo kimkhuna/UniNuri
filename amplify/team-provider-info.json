@@ -23,14 +23,15 @@
       "analytics": {
         "Pinpoint": {
           "Name": "uninuri-staging",
-          "Id": "def74d8816374a039d6dfb6705e97b53",
+          "Id": "7bcea1035c464524b25c2437cf1f7417",
           "Region": "ap-northeast-2"
-        }
+        },
+        "uninuri": {}
       },
       "notifications": {
         "Pinpoint": {
           "Name": "uninuri-staging",
-          "Id": "def74d8816374a039d6dfb6705e97b53",
+          "Id": "7bcea1035c464524b25c2437cf1f7417",
           "Region": "ap-northeast-2"
         }
       },

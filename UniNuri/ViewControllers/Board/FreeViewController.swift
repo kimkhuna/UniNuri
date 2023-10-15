@@ -25,6 +25,7 @@ class FreeViewController: UIViewController {
         
         self.navigationController?.navigationBar.isHidden = false
         
+        
         let nibName = UINib(nibName: "FreeDetailTableViewCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "FreeDetailCell")
         
@@ -84,11 +85,11 @@ extension FreeViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FreeDetailCell", for: indexPath) as? FreeDetailTableViewCell else {return UITableViewCell()}
         
-        
+        let temperalDateFormatter = TemporalFormat.short
         cell.titleLabel.text = freeboard[indexPath.row].title
         cell.contentLabel.text = freeboard[indexPath.row].content
         cell.writerLabel.text = freeboard[indexPath.row].writer
-//        cell.dateLabel.text = String(freeboard[indexPath.row].registerdate)
+        cell.dateLabel.text = freeboard[indexPath.row].registerdate?.iso8601FormattedString(format: temperalDateFormatter)
         
         
         return cell
@@ -104,12 +105,14 @@ extension FreeViewController: UITableViewDataSource, UITableViewDelegate{
         
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "PostDetailVC") as? PostDetailViewController else{return}
         
+        let temperalDateFormatter = TemporalFormat.short
+        
         vc.category = "Freeboard"
         vc.boardID = freeboard[indexPath.row].id
         vc.postTitle = freeboard[indexPath.row].title
         vc.content = freeboard[indexPath.row].content
         vc.writer = freeboard[indexPath.row].writer
-        vc.date = freeboard[indexPath.row].registerdate?.iso8601String
+        vc.date = freeboard[indexPath.row].registerdate?.iso8601FormattedString(format: temperalDateFormatter)
         
         
         self.navigationController?.pushViewController(vc, animated: true)

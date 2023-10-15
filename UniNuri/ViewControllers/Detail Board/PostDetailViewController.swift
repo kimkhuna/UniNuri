@@ -172,18 +172,19 @@ extension PostDetailViewController: UITableViewDelegate, UITableViewDataSource{
         cell.layer.cornerRadius = 10
         cell.layer.borderColor = UIColor.black.cgColor
         
-        
+        let temperalFormatter = TemporalFormat.short
+
         if(category == "Infoboard"){
             cell.writerLabel.text = thisInfoComment[indexPath.row].com_writer
             cell.commentLabel.text = thisInfoComment[indexPath.row].com_content
-            cell.dateLabel.text = thisInfoComment[indexPath.row].createdAt?.iso8601String
+            cell.dateLabel.text = thisInfoComment[indexPath.row].createdAt?.iso8601FormattedString(format: temperalFormatter)
             
             return cell
         }
         else if(category == "Freeboard"){
             cell.writerLabel.text = thisFreeComment[indexPath.row].com_writer
             cell.commentLabel.text = thisFreeComment[indexPath.row].com_content
-            cell.dateLabel.text = thisFreeComment[indexPath.row].createdAt?.iso8601String
+            cell.dateLabel.text = thisFreeComment[indexPath.row].createdAt?.iso8601FormattedString(format: temperalFormatter)
             
             return cell
         }

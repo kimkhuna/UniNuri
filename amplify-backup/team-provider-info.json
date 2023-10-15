@@ -1,0 +1,44 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-uninuri-staging-82546-authRole",
+      "UnauthRoleArn": "arn:aws:iam::825562211124:role/amplify-uninuri-staging-82546-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::825562211124:role/amplify-uninuri-staging-82546-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-uninuri-staging-82546-deployment",
+      "UnauthRoleName": "amplify-uninuri-staging-82546-unauthRole",
+      "StackName": "amplify-uninuri-staging-82546",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:825562211124:stack/amplify-uninuri-staging-82546/679fb1d0-02b1-11ee-954b-020fc26d1194",
+      "AmplifyAppId": "d2ar022yf2jpya"
+    },
+    "categories": {
+      "auth": {
+        "uninuri": {}
+      },
+      "api": {
+        "UniNuri": {},
+        "AdminQueries": {}
+      },
+      "analytics": {
+        "Pinpoint": {
+          "Name": "uninuri-staging",
+          "Id": "def74d8816374a039d6dfb6705e97b53",
+          "Region": "ap-northeast-2"
+        }
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "uninuri-staging",
+          "Id": "def74d8816374a039d6dfb6705e97b53",
+          "Region": "ap-northeast-2"
+        }
+      },
+      "function": {
+        "AdminQueriesa261114f": {
+          "deploymentBucketName": "amplify-uninuri-staging-82546-deployment",
+          "s3Key": "amplify-builds/AdminQueriesa261114f-34344e634d6d4b555534-build.zip"
+        }
+      }
+    }
+  }
+}

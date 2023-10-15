@@ -91,7 +91,8 @@ class SelectLoginViewController: UIViewController {
         do {
             let signInResult = try await Amplify.Auth.signInWithWebUI(for: .apple, presentationAnchor: self.view.window!)
             if signInResult.isSignedIn {
-                print("Sign in succeeded")
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AppleRegisterVC") as? AppleRegisterViewController else{return}
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         } catch let error as AuthError {
             print("Sign in failed \(error)")

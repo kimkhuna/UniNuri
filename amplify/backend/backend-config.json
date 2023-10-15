@@ -1,4 +1,10 @@
 {
+  "analytics": {
+    "uninuri": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint"
+    }
+  },
   "api": {
     "UniNuri": {
       "dependsOn": [],
@@ -48,6 +54,14 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "notifications": {
+    "uninuri": {
+      "channels": [
+        "APNS"
+      ],
+      "service": "Pinpoint"
     }
   },
   "parameters": {

@@ -9,9 +9,11 @@ import UIKit
 import Amplify
 import AWSDataStorePlugin
 import AWSAPIPlugin
-import UserNotifications
-import AWSPinpoint
 import AWSCognitoAuthPlugin
+
+import AWSPinpoint
+import UserNotifications
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,14 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
 //        // Notification
-//        let pinpointConfiguration = AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions)
-//        pinpointConfiguration.debug = true
-//        pinpoint = AWSPinpoint(configuration: pinpointConfiguration)
-//
-//        registerForPushNotification()
-//
-//        AWSDDLog.sharedInstance.logLevel = .verbose
-//        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
         
         // API 연결
         do {
@@ -94,9 +88,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
 //
 //        }
-        
+//        
 //        pinpoint?.notificationManager.interceptDidReceiveRemoteNotification(userInfo, fetchCompletionHandler: completionHandler)
-        
+//        
 //        completionHandler(.newData)
 //    }
 }
@@ -120,4 +114,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        completionHandler()
 //    }
 //}
-
+//
