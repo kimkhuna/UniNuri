@@ -1,6 +1,8 @@
 
 
 #amplify-do-not-edit-begin
+amplify/
+amplify-backup/
 amplify/\#current-cloud-backend
 amplify/.config/local-*
 amplify/logs
@@ -20,4 +22,6 @@ amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
 **.sample
+appleID Cert/
+notification Cert/
 #amplify-do-not-edit-end
